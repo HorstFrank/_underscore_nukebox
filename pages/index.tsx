@@ -8,8 +8,8 @@ import songs from "../assets/jsons/music.json";
 
 // console.log(songs);
 const sortedSongs = songs.sort((a, b) => {
-  const a = a.title;
-  const b = b.title;
+  a = a.title;
+  b = b.title;
   // return a > b ? 1 : a < b ? -1 : 0;
   if (a > b) {
     return 1;
