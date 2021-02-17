@@ -1,0 +1,5 @@
+.headerfont {
+  font-family: "be-my-glittertine", serif;
+  color: var(--logo-font-color);
+  font-size: 40px;
+}
