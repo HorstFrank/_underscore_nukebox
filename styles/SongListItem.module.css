@@ -1,0 +1,36 @@
+.songlistcontainer {
+  /* background-color: greenyellow; */
+
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  width: 100%;
+  margin-bottom: 5px;
+  border-bottom: 1px solid hsl(var(--hsl-color), 46%, 23%);
+}
+
+.songlistcover {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.songlistsongtextcontainer {
+  padding: 0 10px;
+
+  /* vertical-align: ; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.songlistsongtitle {
+  font-family: "be-my-glittertine", serif;
+  color: rgb(236, 236, 236);
+  letter-spacing: 0.1em;
+}
+
+.songlistAlbumtext {
+  color: rgb(199, 199, 199);
+  font-size: 13px;
+  opacity: 0.4;
+}
