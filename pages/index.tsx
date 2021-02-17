@@ -21,6 +21,7 @@ const sortedSongs = songs.sort((a, b) => {
 });
 
 const list = sortedSongs.map((e) => {
+  // console.log(e);
   return (
     <SongListItem
       key={e.id.toString()}
