@@ -1,5 +1,8 @@
 :root {
-  --background-color: rgb(16, 41, 70);
+  --hsl-color: 216;
+
+  /* --background-color: rgb(16, 41, 70); */
+  --background-color: hsl(var(--hsl-color), 96%, 16%);
   --logo-font-color: rgb(150, 255, 108);
   --primary-font-color: white;
 }
