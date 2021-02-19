@@ -9,7 +9,8 @@ export function Player(props: AudioDingens) {
   return (
     <div className={styles.xxx}>
       <audio controls src={props.fileUrl}>
-        Willkommen in den 90ern.
+        Your browser does not support the
+            <code>audio</code> element.
       </audio>
     </div>
   );
