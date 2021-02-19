@@ -1,38 +1,48 @@
 import Head from "next/head";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import { SongListItem } from "../components/SongListItem";
-import styles from "../styles/Home.module.css";
+import { getTracks } from "./api/getTracks";
 
 import cover from "../assets/jsons/cover.json";
-import songs from "../assets/jsons/music.json";
-
-// console.log(songs);
-// const sortedSongs = songs.sort((a, b) => {
-//   a = a.title;
-//   b = b.title;
-//   // return a > b ? 1 : a < b ? -1 : 0;
-//   if (a > b) {
-//     return 1;
-//   } else if (a < b) {
-//     return -1;
-//   } else if (a === b) {
-//     return 0;
-//   }
-// });
-
-const list = songs.map((e) => {
-  // console.log(e);
-  return (
-    <SongListItem
-      key={e.id.toString()}
-      coversrc={cover[e.albumTitle].cover}
-      songtitle={e.title}
-      albumtitle={e.albumTitle}
-    />
-  );
-});
+import styles from "../styles/Home.module.css";
+import { sortByTitle } from "../utils/sorter";
+// import songs from "../assets/jsons/music.json";
 
 export default function Home() {
+  const [tracks, setTracks] = useState([]);
+
+  useEffect(() => {
+    getTracks().then((newTracks) => {
+      // console.log({ newTracks });
+      setTracks(newTracks);
+    });
+  }, []);
+
+  const sortedSongs = tracks.sort(sortByTitle);
+
+  const list = sortedSongs.map((e) => {
+    // console.log(e);
+    return (
+      <Link
+        href={`/tracks/${e.id}`}
+        // key={e.id.toString()}
+        key={e.id}
+      >
+        <a>
+          <SongListItem
+            // key={e.id.toString()}
+            // coversrc={"x"}
+            coversrc={cover[e.albumTitle].cover}
+            songtitle={e.title}
+            albumtitle={e.albumTitle}
+          />
+        </a>
+      </Link>
+    );
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,7 +50,6 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Header />
-
       {list}
     </div>
   );
