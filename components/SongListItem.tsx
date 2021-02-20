@@ -4,7 +4,6 @@ type PropType = {
   coversrc: string;
   songtitle: string;
   albumtitle: string;
-  key: string;
 };
 
 export function SongListItem(props: PropType) {
