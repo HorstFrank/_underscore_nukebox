@@ -34,3 +34,23 @@
   font-size: 13px;
   opacity: 0.4;
 }
+
+.songlistcontainer:hover {
+  /* background-color: blueviolet; */
+  animation-duration: 0.1s;
+  animation-name: wiggle;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+  from {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}

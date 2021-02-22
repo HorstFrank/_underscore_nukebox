@@ -1,3 +1,4 @@
-.xxx {
-  color: hotpink;
+.playicon {
+  fill: var(--logo-font-color);
+  transform: scale(0.04);
 }

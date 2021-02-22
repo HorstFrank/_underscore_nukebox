@@ -1,3 +1,19 @@
 .container {
-  color: hotpink;
+  text-align: center;
+}
+
+.container > .cover {
+  width: 155px;
+  border-radius: 10px;
+  margin: 20px 0 20px 0;
+}
+
+.title {
+  font-family: "be-my-glittertine", Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+}
+
+.albumtitle {
+  color: var(--secondary-font-color);
 }
