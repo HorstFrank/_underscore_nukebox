@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { ReactComponent as Play } from "./../../assets/player/play.svg";
 import { ReactComponent as Pause } from "./../../assets/player/pause.svg";

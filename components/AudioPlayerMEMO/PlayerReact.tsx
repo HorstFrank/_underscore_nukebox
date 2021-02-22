@@ -1,3 +1,4 @@
+/* eslint-disable */
 // import styles from "./../styles/PlayerReact.module.css";
 // import ReactAudioPlayer from "react-audio-player";
 

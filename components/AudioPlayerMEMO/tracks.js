@@ -1,3 +1,4 @@
+/* eslint-disable */
 import imgSrc from "./artwork.jpg";
 import imgSrc2 from "./artwork2.jpg";
 import imgSrc3 from "./artwork3.jpg";

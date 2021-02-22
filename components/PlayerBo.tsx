@@ -1,5 +1,4 @@
 import { useRef } from "react";
-// import styles from "../styles/Player.module.css";
 
 type AudioType = {
   fileUrl: string;
