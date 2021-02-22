@@ -1,3 +1,23 @@
 .container {
-  color: hotpink;
+  background-color: hsl(var(--hsl-color), 96%, 21%);
+  padding: 0 0 0 1em;
+  font-size: 1.4em;
+  height: 3em;
+  cursor: pointer;
+  font-family: "be-my-glittertine", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.1em;
+  color: var(--logo-font-color);
+  display: flex;
+  align-items: center;
+}
+
+.arrowsvg {
+  width: 1.2em;
+  height: 1.8em;
+  margin-right: 0.5em;
+}
+
+.arrow {
+  fill: var(--logo-font-color);
+  transform: scale(0.04);
 }
